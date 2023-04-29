@@ -47,8 +47,10 @@ def sec_connect(s_tree,length, search):
             print(s_tree.sec_data)
             result = binary_search(s_tree.sec_data, search)
             print(result)
+            print(s_tree.sec_data[result])
             return
         sec_connect(s_tree.right, length, search)
+
 
 
 def sort_char(sec_data: list):
@@ -107,6 +109,8 @@ if __name__ == '__main__':
     s_mail = input("Enter search mail")
     search = email_cutting(s_mail)
     sec_connect(sec_tree,len(search), search)
+    printing(sec_tree)
+
 
 
 

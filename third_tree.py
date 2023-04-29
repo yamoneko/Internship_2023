@@ -23,11 +23,11 @@ def printing(node):
 
 def connection_test(ftree, name):
     if ftree is not None:
-        #connection_test(ftree.left, name)
+        connection_test(ftree.left, name)
         if ftree.data == name[0]:
             sec_tree_connection(sec_tree,len(name),name)
             return
-        #connection_test(ftree.right, name)
+        connection_test(ftree.right, name)
 
 
 def sec_tree_connection(sec_tree, length, name):
@@ -55,8 +55,6 @@ if __name__ == '__main__':
     while True:
         name = input("Enter name:")
         connection_test(fst_tree, name)
-
-
 
 
 
